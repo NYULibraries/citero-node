@@ -1,4 +1,4 @@
-InputFormats = require('../src/inputFormats').InputFormats 
+InputFormats = require('../../src/inputFormats').InputFormats 
 
 RIS = 
   data: "TY  -  JOUR\nAU  -  Shannon, Claude E.\nER  -\n\n"
