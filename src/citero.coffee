@@ -11,7 +11,7 @@ class Citero
 	  this
     
   to: (format) ->
-	  "#{@data} was converted from #{@fromFormat} to #{format}"
+	  ""
 
 root = exports ? window
 root.Citero = Citero
