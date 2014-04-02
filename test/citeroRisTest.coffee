@@ -4,19 +4,19 @@ chai = require 'chai'
 chai.should()
 
 RIS = require('./helpers/ris').RIS
-
-describe "Citero mapping", ->
-  it "should convert RIS data to OpenURL", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.OPENURL).should.equal(RIS.toOpenUrl)
-  it "should convert RIS data to RIS", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.RIS).should.equal(RIS.toRis)
-  it "should convert RIS data to Refworks Tagged", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.REFWORKS_TAGGED).should.equal(RIS.toRefworksTagged)
-  it "should convert RIS data to bibtex", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.BIBTEX).should.equal(RIS.toBibtex)
-  it "should convert RIS data to easybib", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.EASYBIB).should.equal(RIS.toEasyBib)
-  it "should convert RIS data to csl", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.CSL).should.equal(RIS.toCsl)
-  it "should convert RIS data to csf", ->
-    Citero.map(RIS.data).from(RIS.format).to(OutputFormats.CSF).should.equal(RIS.toCsf)
+for ris in RIS
+  describe "Citero mapping", ->
+    it "should convert RIS data to OpenURL", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.OPENURL).should.equal(ris.toOpenUrl)
+    it "should convert RIS data to RIS", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.RIS).should.equal(ris.toRis)
+    it "should convert RIS data to Refworks Tagged", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.REFWORKS_TAGGED).should.equal(ris.toRefworksTagged)
+    it "should convert RIS data to bibtex", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.BIBTEX).should.equal(ris.toBibtex)
+    it "should convert RIS data to easybib", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.EASYBIB).should.equal(ris.toEasyBib)
+    it "should convert RIS data to csl", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.CSL).should.equal(ris.toCsl)
+    it "should convert RIS data to csf", ->
+      Citero.map(ris.data).from(ris.format).to(OutputFormats.CSF).should.equal(ris.toCsf)
