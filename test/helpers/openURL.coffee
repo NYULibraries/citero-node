@@ -1,8 +1,8 @@
-InputFormats = require('../../src/inputFormats').InputFormats 
+Formats = require('../../src/formats').Formats
 
 OpenURL = 
   data: ""
-  format: InputFormats.OPENURL
+  format: Formats.OPENURL
   toOpenUrl: ""
   toRis: ""
   toRefworksTagged: ""

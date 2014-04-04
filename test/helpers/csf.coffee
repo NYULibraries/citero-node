@@ -1,8 +1,8 @@
-InputFormats = require('../../src/inputFormats').InputFormats 
+Formats = require('../../src/formats').Formats
 
 CSF = 
   data: ""
-  format: InputFormats.CSF
+  format: Formats.CSF
   toOpenUrl: ""
   toRis: ""
   toRefworksTagged: ""

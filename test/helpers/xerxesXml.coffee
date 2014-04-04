@@ -1,8 +1,8 @@
-InputFormats = require('../../src/inputFormats').InputFormats 
+Formats = require('../../src/formats').Formats 
 
 XerxesXML = 
   data: ""
-  format: InputFormats.XERXES_XML
+  format: Formats.XERXES_XML
   toOpenUrl: ""
   toRis: ""
   toRefworksTagged: ""

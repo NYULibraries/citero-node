@@ -1,8 +1,8 @@
-InputFormats = require('../../src/inputFormats').InputFormats 
+Formats = require('../../src/formats').Formats
 
 RefworksTagged = 
   data: ""
-  format: InputFormats.REFWORKS_TAGGED
+  format: Formats.REFWORKS_TAGGED
   toOpenUrl: ""
   toRis: ""
   toRefworksTagged: ""

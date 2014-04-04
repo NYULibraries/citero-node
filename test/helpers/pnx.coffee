@@ -1,8 +1,8 @@
-InputFormats = require('../../src/inputFormats').InputFormats 
+Formats = require('../../src/formats').Formats
 
 PNX = 
   data: ""
-  format: InputFormats.PNX
+  format: Formats.PNX
   toOpenUrl: ""
   toRis: ""
   toRefworksTagged: ""

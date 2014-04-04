@@ -1,5 +1,5 @@
 Citero = require('../src/citero').Citero
-OutputFormats = require('../src/outputFormats').OutputFormats 
+Formats = require('../src/formats').Formats 
 chai = require 'chai'
 chai.should()
 
@@ -7,16 +7,16 @@ OpenURL = require('./helpers/openURL').OpenURL
 
 describe "Citero mapping", ->
   it "should convert OpenURL data to OpenURL", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.OPENURL).should.equal(OpenURL.toOpenUrl)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.OPENURL).should.equal(OpenURL.toOpenUrl)
   it "should convert OpenURL data to RIS", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.RIS).should.equal(OpenURL.toRis)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.RIS).should.equal(OpenURL.toRis)
   it "should convert OpenURL data to Refworks Tagged", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.REFWORKS_TAGGED).should.equal(OpenURL.toRefworksTagged)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.REFWORKS_TAGGED).should.equal(OpenURL.toRefworksTagged)
   it "should convert OpenURL data to bibtex", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.BIBTEX).should.equal(OpenURL.toBibtex)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.BIBTEX).should.equal(OpenURL.toBibtex)
   it "should convert OpenURL data to easybib", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.EASYBIB).should.equal(OpenURL.toEasyBib)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.EASYBIB).should.equal(OpenURL.toEasyBib)
   it "should convert OpenURL data to csl", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.CSL).should.equal(OpenURL.toCsl)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.CSL).should.equal(OpenURL.toCsl)
   it "should convert OpenURL data to csf", ->
-    Citero.map(OpenURL.data).from(OpenURL.format).to(OutputFormats.CSF).should.equal(OpenURL.toCsf)
+    Citero.map(OpenURL.data).from(OpenURL.format).to(Formats.CSF).should.equal(OpenURL.toCsf)

@@ -1,5 +1,5 @@
 Citero = require('../src/citero').Citero
-OutputFormats = require('../src/outputFormats').OutputFormats 
+Formats = require('../src/formats').Formats 
 chai = require 'chai'
 chai.should()
 
@@ -7,16 +7,16 @@ PNX = require('./helpers/pnx').PNX
 
 describe "Citero mapping", ->
   it "should convert PNX data to OpenURL", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.OPENURL).should.equal(PNX.toOpenUrl)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.OPENURL).should.equal(PNX.toOpenUrl)
   it "should convert PNX data to RIS", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.RIS).should.equal(PNX.toRis)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.RIS).should.equal(PNX.toRis)
   it "should convert PNX data to Refworks Tagged", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.REFWORKS_TAGGED).should.equal(PNX.toRefworksTagged)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.REFWORKS_TAGGED).should.equal(PNX.toRefworksTagged)
   it "should convert PNX data to bibtex", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.BIBTEX).should.equal(PNX.toBibtex)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.BIBTEX).should.equal(PNX.toBibtex)
   it "should convert PNX data to easybib", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.EASYBIB).should.equal(PNX.toEasyBib)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.EASYBIB).should.equal(PNX.toEasyBib)
   it "should convert PNX data to csl", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.CSL).should.equal(PNX.toCsl)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.CSL).should.equal(PNX.toCsl)
   it "should convert PNX data to csf", ->
-    Citero.map(PNX.data).from(PNX.format).to(OutputFormats.CSF).should.equal(PNX.toCsf)
+    Citero.map(PNX.data).from(PNX.format).to(Formats.CSF).should.equal(PNX.toCsf)
