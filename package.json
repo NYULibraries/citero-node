@@ -6,5 +6,10 @@
   "description" : "citero",
   "dependencies" : {
     "java" : "*"
+  },
+  "devDependencies" : {
+    "mocha" : "*",
+    "chai" : "*",
+    "coffee-script" : "*"
   }
 }
