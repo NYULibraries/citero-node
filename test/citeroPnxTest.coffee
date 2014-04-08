@@ -1,5 +1,5 @@
-Citero = require('../src/citero').Citero
-Formats = require('../src/formats').Formats 
+Citero = require('../lib/citero').Citero
+Formats = require('../lib/formats').Formats 
 chai = require 'chai'
 chai.should()
 

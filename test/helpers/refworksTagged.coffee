@@ -1,4 +1,4 @@
-Formats = require('../../src/formats').Formats
+Formats = require('../../lib/formats').Formats
 
 RefworksTagged = 
   data: ""
