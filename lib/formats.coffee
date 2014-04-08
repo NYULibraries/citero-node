@@ -1,5 +1,5 @@
 java = require("java");
-java.classpath.push("citero.jar");
+java.classpath.push("./lib/citero.jar");
   
 Formats = java.import("edu.nyu.library.citero.Formats")
 

@@ -4,7 +4,7 @@
 
   Citero = require('../lib/citero').Citero;
 
-  Formats = require('../lib/formats').Formats;
+  Formats = require('../lib/citero').Formats;
 
   chai = require('chai');
 

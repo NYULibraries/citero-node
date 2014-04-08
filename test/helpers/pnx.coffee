@@ -1,4 +1,4 @@
-Formats = require('../../lib/formats').Formats
+Formats = require('../../lib/citero').Formats
 
 PNX = 
   data: ""

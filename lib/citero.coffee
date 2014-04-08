@@ -1,7 +1,8 @@
+java = require("java");
+java.classpath.push("./lib/citero.jar");
+
 class Citero
   constructor: (data) ->
-    java = require("java")
-    java.classpath.push("citero.jar")
     @cite = java.import("edu.nyu.library.citero.Citero")
     @cite = @cite.mapSync(data)
     this
@@ -18,3 +19,4 @@ class Citero
 
 root = exports ? window
 root.Citero = Citero
+root.Formats = require("./formats").Formats
