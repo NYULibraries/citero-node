@@ -1,5 +1,5 @@
 java = require("java");
-java.classpath.push("./lib/citero.jar");
+java.classpath.push("#{__dirname}/citero.jar");
 
 class Citero
   constructor: (data) ->
