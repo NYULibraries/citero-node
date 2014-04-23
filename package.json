@@ -4,13 +4,20 @@
   "version" : "0.1.0",
   "author" : "hab278 <hab278@nyu.edu?",
   "description" : "citero",
+  "main": "./lib/citero",
+  "bin" : {
+    "citero" : "./bin/citero"
+  },
   "dependencies" : {
     "java" : "*"
   },
-  "main": "./lib/citero",
   "devDependencies" : {
     "mocha" : "*",
     "chai" : "*",
     "coffee-script" : "*"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
   }
 }

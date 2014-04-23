@@ -1,22 +1,23 @@
-Citero = require('../lib/citero').Citero
-Formats = require('../lib/citero').Formats 
+root = require('../lib/citero')
+Citero = root.Citero
+Formats = root.Formats
 chai = require 'chai'
-chai.should()
+expect = chai.expect
 
 CSF = require('./helpers/csf').CSF
-
-describe "Citero mapping", ->
-  it "should convert CSF data to OpenURL", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.OPENURL).should.equal(CSF.toOpenUrl)
-  it "should convert CSF data to RIS", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.RIS).should.equal(CSF.toRis)
-  it "should convert CSF data to Refworks Tagged", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.REFWORKS_TAGGED).should.equal(CSF.toRefworksTagged)
-  it "should convert CSF data to bibtex", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.BIBTEX).should.equal(CSF.toBibtex)
-  it "should convert CSF data to easybib", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.EASYBIB).should.equal(CSF.toEasyBib)
-  it "should convert CSF data to csl", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.CSL).should.equal(CSF.toCsl)
-  it "should convert CSF data to csf", ->
-    Citero.map(CSF.data).from(CSF.format).to(Formats.CSF).should.equal(CSF.toCsf)
+for csf in CSF
+  describe "Citero mapping", ->
+    it "should convert CSF data to OpenURL", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.OPENURL)).to.equal(csf.toOpenUrl)
+    it "should convert CSF data to RIS", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.RIS)).to.equal(csf.toRis)
+    it "should convert CSF data to Refworks Tagged", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.REFWORKS_TAGGED)).to.equal(csf.toRefworksTagged)
+    it "should convert CSF data to bibtex", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.BIBTEX)).to.equal(csf.toBibtex)
+    it "should convert CSF data to easybib", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.EASYBIB)).to.equal(csf.toEasyBib)
+    it "should convert CSF data to csl", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.CSL)).to.equal(csf.toCsl)
+    it "should convert CSF data to csf", ->
+      expect(Citero.map(csf.data).from(csf.format).to(Formats.CSF)).to.equal(csf.toCsf)

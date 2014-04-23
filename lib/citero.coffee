@@ -8,12 +8,12 @@ class Citero
     this
 
   @map: (data) ->
-    new @ data
-    
+    new this(data)
+
   from: (format) ->
     @cite.fromSync(format)
     this
-    
+
   to: (format) ->
 	  @cite.toSync(format)
 
