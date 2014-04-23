@@ -4,6 +4,9 @@
   "version" : "0.1.0",
   "author" : "hab278 <hab278@nyu.edu?",
   "description" : "citero",
+  "repository": {
+    "url": ""
+  },
   "main": "./lib/citero",
   "bin" : {
     "citero" : "./bin/citero"
